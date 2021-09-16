@@ -1,0 +1,23 @@
+-- Code your testbench here
+library IEEE;
+use IEEE.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity g09_Modulo10 is
+port(
+	sum         : in unsigned(std_logic_vector(4 downto 0));
+   firstdigit  : out unsigned(std_logic_vector(4 downto 0));
+   seconddigit : out unsigned(std_logic_vector(4 downto 0)));
+    
+    end g09_Modulo10;
+    
+    architecture example of g09_Modulo10 is
+    
+    begin
+    
+    firstdigit <= sum rem 10;
+    seconddigit <= sum/10;
+    
+    end example;
+    
+    
